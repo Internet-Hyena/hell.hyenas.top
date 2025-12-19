@@ -44,8 +44,9 @@ html {
 }
 body {
 	padding: var(--padding-body);
-	max-width: 40em;
+	max-width: 45em;
 	border: 1px solid #111;
+	box-sizing: border-box;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
