@@ -8,13 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bad475e2c5ae3330",
+            "id": "1a5051b5a57c228b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.6"
             }
           },
           {
@@ -194,19 +196,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "e3148c373ba27df8",
+  "active": "1a5051b5a57c228b",
   "lastOpenFiles": [
+    "_draft/2025-accord-01.md",
+    "_draft/2025-accord-01.md.draft",
+    "_draft",
+    "_config/_draft",
+    "css/_draft",
+    "content/_draft",
+    "content/blog/2025-accord-01.md",
+    "content/blog/2025-accord-01.md.draft",
+    "_site/accord/index.html",
     "content/about.md",
     "_site/about/index.html",
     "_site/about",
     "_site/404.html",
-    "_site/tags/posts-with-two-tags/index.html",
-    "_site/tags/number-2/index.html",
-    "_site/tags/second-tag/index.html",
-    "_site/tags/another-tag/index.html",
-    "_site/tags/posts-with-two-tags",
-    "_site/tags/number-2",
-    "_site/tags/second-tag",
     "node_modules/@img/sharp-libvips-darwin-arm64/README.md",
     "node_modules/prismjs/README.md",
     "node_modules/prismjs/CHANGELOG.md",
@@ -229,8 +233,6 @@
     "node_modules/@11ty/eleventy/SECURITY.md",
     "node_modules/@11ty/eleventy/README.md",
     "node_modules/@11ty/eleventy/CODE_OF_CONDUCT.md",
-    "node_modules/nunjucks/README.md",
-    "node_modules/@11ty/eleventy-plugin-syntaxhighlight/README.md",
-    "node_modules/sharp/README.md"
+    "node_modules/nunjucks/README.md"
   ]
 }

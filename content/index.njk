@@ -7,11 +7,12 @@ const eleventyNavigation = {
 const numberOfLatestPostsToShow = 20;
 ---
 
-<h1><img class="home-banner" src="banner.png" alt="Helliara Hyenas"></h1>
+<h1><img class="home-banner" src="banner.webp" alt="Helliara Hyenas"></h1>
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
+<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}
+</h2>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -19,7 +20,7 @@ const numberOfLatestPostsToShow = 20;
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
+	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
 {% endif %}
 
 {# List every content page in the project #}
