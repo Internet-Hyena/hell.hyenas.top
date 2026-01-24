@@ -1,6 +1,7 @@
 /* Defaults */
 :root {
-	--font-family: 'Times New Roman', Times, serif;
+	--font-family-serif: 'Times New Roman', Times, serif;
+	--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -38,6 +39,7 @@
 	--syntax-tab-size: 2;
 	--padding-body: 2em;
 	background-image: url('/img/dot.svg');
+	background-attachment: fixed;
 	background-size: 1em;
 	background-repeat: 200px;
 }
@@ -130,11 +132,11 @@ p:last-child {
 }
 
 p {
-	line-height: 1.5;
+	line-height: 1.8;
 }
 
 li {
-	line-height: 1.5;
+	line-height: 1.8;
 }
 
 a[href] {
@@ -245,6 +247,7 @@ header {
 }
 
 .home-link {
+	font-family: var(--font-family-serif);
 	flex-grow: 1;
 	font-size: 1em;
 	/* 16px /16 */
