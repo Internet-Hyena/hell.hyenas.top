@@ -215,8 +215,8 @@ code {
 }
 
 pre:not([class*="language-"]) {
-	margin: .5em 0;
-	line-height: 1.375;
+	margin: 1em;
+	line-height: 1.8;
 	/* 22px /16 */
 	-moz-tab-size: var(--syntax-tab-size);
 	-o-tab-size: var(--syntax-tab-size);
@@ -226,14 +226,14 @@ pre:not([class*="language-"]) {
 	hyphens: none;
 	direction: ltr;
 	text-align: left;
-	white-space: pre;
+	white-space: pre-wrap;
 	word-spacing: normal;
 	word-break: normal;
 	overflow-x: auto;
 }
 
 code {
-	word-break: break-all;
+	/* word-break: break-all; */
 }
 
 /* Header */

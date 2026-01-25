@@ -7,7 +7,11 @@ permalink: think-blue-cuck-two/
 theme: accord
 ---
 
-![Think Blue Cuck Two Drone play. Hypnosis. Grooming.](./20260124-think-blue-cuck-one-two.webp)
+<style>
+    {% include "css/cuck.css" %}
+</style>
+
+![Think Blue Cuck Two.](./20260124-think-blue-cuck-one-two.webp)
 
 CW: Pet play. Hypnosis. Non-consensual drug use. Insecurity. Voyeurism. Questionably ethical non-monogamy. Living weapons (Drone kink). Non-living weapons (Firearms).
 
@@ -87,7 +91,16 @@ I stared at the black screen pressing against my nose, shivering as Rhea's finge
 
 The headset went back to that pattern. It was a bunch of blue dots in a fluid spiral, kind of like a vortex. Like a hand was reaching into a pond and lazily tracing circles across its surface. Individual words blinked in the middle in oppressive green computer font.
 
-It alternated: *GOOD – PUPPY – GOOD – HOUND*
+It alternated:
+
+<div class='headset-talk'>GOOD
+PUPPY
+GOOD
+HOUND
+GOOD
+PUPPY
+GOOD
+HOUND</div>
 
 I relaxed into the words. I loved being a "good hound" for Rhea.
 
@@ -97,13 +110,46 @@ I relaxed into the words. I loved being a "good hound" for Rhea.
 
 The words started to blink faster:
 
-*HELLO – ALPHA – EXPERIMENTAL – 217 – FORMERLY – "CRYS" – YOU – ARE – A – WONDERFUL – ASSET*
+<div class="headset-talk">HELLO
+ALPHA
+EXPERIMENTAL
+UNIT
+217
+CRYS
+YOU
+ARE
+A
+WONDERFUL
+ASSET
+</div>
 
 *Aww, thanks Rhea!* I thought, *What a nice compliment!*
 
-*LEVEL 1 – EXPERIMENTAL – TECHNICIAN – 087 – FORMERLY – "RHEA" – CONNECTED – YOU – BUT – IS – NOT – SPEAKING*
-
-*FOR – PURPOSES – OF – CONDITIONING – YOU – ARE – GRACED – BY – ACCORD – TECHNICIAN – LEVEL – NINE – 011.*
+<div class="headset-talk">L1
+EXPERIMENTAL
+TECHNICIAN
+087
+RHEA
+CONNECTED
+YOU
+BUT
+IS
+NOT
+SPEAKING.
+FOR
+PURPOSES
+OF
+CONDITIONING
+YOU
+ARE
+GRACED
+BY
+ACCORD
+TECHNICIAN
+LEVEL
+NINE
+011.
+</div>
 
 "Wooh," I muttered. "I don't... These words...?"
 
@@ -111,13 +157,18 @@ I had already lost the plot. The words were going too fast to keep up with. Was 
 
 As if responding to my thoughts, the headset began to blink slower again:
 
-*NOTED. – WE – WILL – SIMPLIFY.
-
-*BEGINNING – TRAINING – PROGRAM – RESEARCH – CANDIDATE – 1*
+<div class="headset-talk">NOTED.
+WE WILL SIMPLIFY.
+BEGINNING TRAINING PROGRAM
+RESEARCH CANDIDATE 6
+</div>
 
 The music changed to a slower, more warbling one. The headset started repeating:
 
-*COMMAND: – SNIFF. – SENSATION: – BLUEBERRY. – RESPONSE: – NUMB.*
+<div class="headset-talk">COMMAND: SNIFF.
+SENSATION: BLUEBERRY.
+RESPONSE: NUMB.
+</div>
 
 I took a deep breath in through my nose, and- Oh, fuck. My tongue lolled from my mouth, and I took another deeper sniff. It did smell like blueberries. Sweet, tart, plump blueberries that melted in my mouth when Rhea fed them to me.
 
@@ -143,11 +194,15 @@ I gave a screwed-up grin, "You know I'm way too bratty to play along with stuff 
 
 The headset was probably burning the swirling spiral of dots into my retinas. As I thought that, the brightness adjusted down slightly, and continued flashing:
 
-*COMMAND: – SNIFF. – SENSATION: – BLUEBERRY. – RESPONSE: – NUMB.*
+<div class="headset-talk">COMMAND: SNIFF.
+SENSATION: BLUEBERRY.
+RESPONSE: NUMB.
+</div>
 
 Hands on me... Hands on my body. Being nothing but an oblivious dumb mutt, blindfolded. This was where I belonged. This was what I deserved. A good puppy.
 
-*GOOD – HOUND*.
+*GOOD
+HOUND*.
 
 "Wooof!" I grunted, "More tummy rubs, please!"
 
@@ -211,21 +266,22 @@ Rhea turned, acknowledging me only with a demonic smile. She tossed her head bac
 
 ---
 
-*COMMAND: – EDGE. – SENSATION: – EDGE. – RESPONSE: – EDGE.*
-
-*COMMAND: EDGE. SENSATION: EDGE. RESPONSE: EDGE.*
-
-*COMMAND:EDGE.SENSATION:EDGE.RESPONSE:EDGE.*
-
-*COMMANDEDGESENSATIONEDGERESPONSEEDGE.*
-
-*COMMEDSENSEDRESEDGE*
+<div class="headset-talk">COMMAND: EDGE.
+SENSATION: EDGE.
+RESPONSE: EDGE.
+COMMAND: EDGE.
+SENSATION: EDGE.
+RESPONSE: EDGE.
+COMMAND:EDGE.SENSATION:EDGE.RESPONSE:EDGE.
+COMMANDEDGESENSATIONEDGERESPONSEEDGE.
+COMMEDSENSEDRESEDGE
+</div>
 
 **"Alpha Echo 217. You may cum."**
 
-*COMMAND: CUM.*
-
-*RESPONSE: HOLY.*
+<div class="headset-talk">COMMAND: CUM.
+RESPONSE: HOLY.
+</div>
 
 ---
 
@@ -281,46 +337,41 @@ I stood with my hand on the freezer, as tears streaked silently down my face.
 
 In her bedroom, LE1-087 RHEA sat patiently at her desk. Spread out on her desk, amidst a bunch of projects and circuit boards, was a black metal pistol. Rhea fiddled with it inserting and removing the cartridge, fiddling with the silencer. A simplistic encrypted video chat window appeared, the message she was waiting for.
 
-```
-••• L9 TO LE1-087, PLEASE REPORT.
+<div class="accord-talk">••• L9 TO LE1-087, PLEASE REPORT.
 ••• RESULTS OF RC6 TRIAL?
 ••• SPEAK.
-```
+</div>
 
 Rhea chose her words carefully, still fiddling with the gun to keep her hands busy.
 
 "Successfully tested Candidate Chemical RC6 on AE-217 and BE-218. Shows promise for suggestibility and pain relief. AE-217 successfully completed Training Program RC1, including Reinforcement Reward Type-3."
 
-```
-••• GLAD TO HEAR.
+<div class="accord-talk">••• GLAD TO HEAR.
 ••• ANY REACTIONS?
 ••• SPEAK.
-```
+</div>
 
 "None adverse. All positive. Subjects displayed heightened arousal and limited pain response. Effects persisted until orgasm and subsequently ceasing administration."
 
-```
-••• YES, WE HAD THE PLEASURE OF WATCHING.
+<div class="accord-talk">••• YES, WE HAD THE PLEASURE OF WATCHING.
 ••• YOUR OWN UNAUTHORIZED EMISSION HAS ALSO BEEN LOGGED.
-```
+</div>
 
 Rhea flushed slightly in a way she hoped her webcam would not detect. She bashfully lowered the gun to the table.
 
-```
-••• CONSIDER THAT YOUR REWARD.
+<div class="accord-talk">••• CONSIDER THAT YOUR REWARD.
 ••• PLEASE TRY TO CONTROL YOURSELF IN THE FUTURE.
 ••• IT IS UNBEFITTING OF LEVELED PERSONNEL, AND MAY HARM YOUR CLADE'S HIERARCHY.
 ••• SPEAK.
-```
+</div>
 
 "Apologies, Ma'am. I understand. Hierarchy should be intact. We deprived the Beta of orgasm and our attention. Our orgasm appeared to enhance her submission. With just a little more prompting, she should take her rightful place."
 
-```
-••• YOU ARE FORGIVEN. YOU ARE DOING VERY IMPORTANT WORK, L1.
+<div class="accord-talk">••• YOU ARE FORGIVEN. YOU ARE DOING VERY IMPORTANT WORK, L1.
 ••• PHARMACEUTICAL WILL BEGIN DISTRIBUTION OF CHEMICAL 6 TO YOUR FELLOW CLADES.
 ••• KEEP IN TOUCH.
 ••• YOUR AUDIENCE WATCHES WITH INTEREST AND EXCITEMENT.
 ••• GLORY TO THE ACCORD.
-```
+</div>
 
 "Glory to the Accord."
