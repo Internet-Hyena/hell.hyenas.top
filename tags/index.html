@@ -13,7 +13,8 @@
 			/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
-	--font-family: 'Times New Roman', Times, serif;
+	--font-family-serif: 'Times New Roman', Times, serif;
+	--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -51,6 +52,7 @@
 	--syntax-tab-size: 2;
 	--padding-body: 2em;
 	background-image: url('/img/dot.svg');
+	background-attachment: fixed;
 	background-size: 1em;
 	background-repeat: 200px;
 }
@@ -143,11 +145,11 @@ p:last-child {
 }
 
 p {
-	line-height: 1.5;
+	line-height: 1.8;
 }
 
 li {
-	line-height: 1.5;
+	line-height: 1.8;
 }
 
 a[href] {
@@ -226,8 +228,8 @@ code {
 }
 
 pre:not([class*="language-"]) {
-	margin: .5em 0;
-	line-height: 1.375;
+	margin: 1em;
+	line-height: 1.8;
 	/* 22px /16 */
 	-moz-tab-size: var(--syntax-tab-size);
 	-o-tab-size: var(--syntax-tab-size);
@@ -237,14 +239,14 @@ pre:not([class*="language-"]) {
 	hyphens: none;
 	direction: ltr;
 	text-align: left;
-	white-space: pre;
+	white-space: pre-wrap;
 	word-spacing: normal;
 	word-break: normal;
 	overflow-x: auto;
 }
 
 code {
-	word-break: break-all;
+	/* word-break: break-all; */
 }
 
 /* Header */
@@ -258,6 +260,7 @@ header {
 }
 
 .home-link {
+	font-family: var(--font-family-serif);
 	flex-grow: 1;
 	font-size: 1em;
 	/* 16px /16 */
@@ -446,6 +449,9 @@ html {
 <ul>
 
 	
+	<li><a href="/tags/accord/" class="post-tag">accord</a></li>
+
+	
 	<li><a href="/tags/test/" class="post-tag">test</a></li>
 
 </ul>
@@ -458,7 +464,7 @@ html {
 			<p>All bites reserved.</p>
 		</footer>
 
-		<!-- This page `/tags/` was built on 2026-01-16T00:25:22.008Z -->
+		<!-- This page `/tags/` was built on 2026-01-25T00:01:59.846Z -->
 		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>

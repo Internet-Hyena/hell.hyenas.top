@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en" class="theme-accord">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Think Blue, Cuck Two</title>
+		<meta name="description" content="Writing fetish fiction">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="HELL THE HYENAS">
+		
+		
+		
+		<style>
+			.headset-talk {
+    /* color: rgb(0, 255, 0); */
+    white-space: pre-wrap;
+    font-family: var(--font-family-monospace);
+    font-style: italic;
+    /* font-weight: bold; */
+    line-height: 3;
+    text-align: left;
+}
+
+.accord-talk {
+    /* color: hsl(240, 100%, 80%); */
+    white-space: pre-wrap;
+    font-family: var(--font-family-monospace);
+    line-height: 2;
+    text-align: left;
+    margin: 1rem;
+}
+
+/* 
+.headset-talk::after {
+    font-family: var(--font-family-monospace);
+    font-weight: bold;
+    content: '▮';
+    animation: 1s blink-cursor infinite;
+}
+
+@keyframes blink-cursor {
+
+    0%,
+    49.9% {
+        opacity: 0;
+    }
+
+    50%,
+    99.9% {
+        opacity: 1;
+    }
+} */
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family-serif: 'Times New Roman', Times, serif;
+	--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: hsl(0, 10%, 40%);
+	--color-gray-50: hsl(0, 10%, 50%);
+	--color-gray-90: hsl(0, 10%, 90%);
+
+	/* --text-color is assigned to --color-gray-_ above */
+	--background-color: hsl(0, 50%, 10%);
+
+	--text-color: hsl(0, 0%, 90%);
+	--text-color-link: hsl(0, 75%, 50%);
+	--text-color-link-active: hsl(0, 75%, 60%);
+	--text-color-link-visited: hsl(0, 75%, 60%);
+
+	--syntax-tab-size: 2;
+	--padding-body: 2em;
+}
+
+.theme-accord {
+	--color-gray-20: hsl(0, 0%, 40%);
+	--color-gray-50: hsl(0, 0%, 50%);
+	--color-gray-90: hsl(0, 0%, 90%);
+
+	/* --text-color is assigned to --color-gray-_ above */
+	--background-color: hsl(230, 100%, 5%);
+
+	--text-color: hsl(0, 0%, 90%);
+	--text-color-link: hsl(230, 100%, 60%);
+	--text-color-link-active: hsl(230, 100%, 60%);
+	--text-color-link-visited: hsl(230, 100%, 60%);
+
+	--syntax-tab-size: 2;
+	--padding-body: 2em;
+	background-image: url('/img/dot.svg');
+	background-attachment: fixed;
+	background-size: 1em;
+	background-repeat: 200px;
+}
+
+.theme-plain {
+	--color-gray-20: hsl(0, 0%, 40%);
+	--color-gray-50: hsl(0, 0%, 50%);
+	--color-gray-90: hsl(0, 0%, 90%);
+
+	/* --text-color is assigned to --color-gray-_ above */
+	--background-color: hsl(0, 0%, 100%);
+
+	--text-color: hsl(0, 0%, 20%);
+	--text-color-link: hsl(0, 0%, 20%);
+	--text-color-link-active: hsl(40, 100%, 50%);
+	--text-color-link-visited: hsl(0, 0%, 20%);
+
+	--syntax-tab-size: 2;
+	--padding-body: 2em;
+	background-image: none;
+}
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	padding: var(--padding-body);
+	max-width: 45em;
+	border: 1px solid #111;
+	box-sizing: border-box;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+
+img[width][height] {
+	height: auto;
+}
+
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+p {
+	line-height: 1.8;
+}
+
+li {
+	line-height: 1.8;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px solid var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px solid var(--color-gray-20);
+	padding: 1em 0;
+}
+
+.links-nextprev>* {
+	flex-grow: 1;
+}
+
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+
+pre:not([class*="language-"]) {
+	margin: 1em;
+	line-height: 1.8;
+	/* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre-wrap;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+
+code {
+	/* word-break: break-all; */
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+
+.home-link {
+	font-family: var(--font-family-serif);
+	flex-grow: 1;
+	font-size: 1em;
+	/* 16px /16 */
+	font-weight: 700;
+}
+
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.nav-item {
+	display: inline-block;
+}
+
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em;
+	/* 13px /16 */
+	color: var(--color-gray-90);
+}
+
+.postlist-date {
+	word-spacing: -0.5px;
+}
+
+.postlist-link {
+	font-size: 1.1875em;
+	/* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+
+.postlist-item>.post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/* theme */
+
+html {
+	background-color: var(--background-color);
+	background-image: url('/img/leviathan_bg.svg ');
+	background-size: 5em;
+}
+
+/* home */
+
+.home-pfp {
+	width: 6rem;
+	border-radius: 100%;
+	margin: 1em;
+}
+
+.home-header {
+	display: flex;
+	align-items: center;
+	background-color: hsl(0, 75%, 40%);
+	background: url('/img/banner.webp');
+	background-size: cover;
+	color: black;
+}
+
+.home-title {
+	text-align: center;
+	font-size: 5em;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 900;
+	margin-block: 0;
+	/* color: hsl(0, 75%, 50%); */
+}
+
+.home-subtitle {
+	font-size: 110%;
+	margin-block-start: 0;
+}
+
+.home-banner {
+	/* margin-inline: calc(-1 * var(--padding-body)); */
+	max-width: 100%;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+		</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">HELL THE HYENAS</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+						<li class="nav-item">
+							<a href="/">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="/blog/">Archive</a>
+						</li>
+						<li class="nav-item">
+							<a href="/about/">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="/feed/feed.xml">RSS</a>
+						</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="think-blue-cuck-two">Think Blue, Cuck Two</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2026-01-24">24 January 2026</time></li>
+	<li><a href="/tags/accord/" class="post-tag">accord</a></li>
+</ul>
+
+
+<p><img src="/think-blue-cuck-two/8lB9u7Mjwy-1024.webp" alt="Think Blue Cuck Two." loading="lazy" decoding="async" width="1024" height="1024"></p>
+<p>CW: Pet play. Hypnosis. Non-consensual drug use. Insecurity. Voyeurism. Questionably ethical non-monogamy. Living weapons (Drone kink). Non-living weapons (Firearms).</p>
+<hr>
+<p>Impotent fingers of light poked between thrifted blackout curtains and under the door of me and Crys's dorm. Tiny bits of sunlight spilled limply into blackness, only to be overtaken by the throbbing RGB lights of a gaming PC playing music to drown out the gentle squeaking. Gentle squeaking, whirring fans, whimpered little moans.</p>
+<p>♫ Playlist: Hyperpop to Fuck and Murder To | YouTube</p>
+<p>A twin sized bed was an inconvenient place to have sex, which was probably why the college provided them. Luckily, Crys's preferred positions made this a non-issue. She knelt on all fours, collared and leashed to the bedframe, like she was being examined at the veterinarian. Crys laid on top of a body pillow, ruthlessly humping and biting and leaking into it. I stood beside the bed, petting her. My black gloved fingers slid through Crys's hair, down the smooth fat of her back, and ended in a teasing spank of her plump asscheeks, eliciting a little moan. Then again, and again. Short blue curls slipped between my fingers.</p>
+<p>&quot;What a sweet girl,&quot; I cooed, stroking my own cock, only occasionally pausing to touch Crys's. I knew how much she loved being milked from behind. Just one or two strokes here and there, to get her nice and pent up. I pressed my index finger deliberately into her shaft. &quot;Does my good girl deserve this?&quot;</p>
+<p>Crys was particularly deserving that night. She had aced her first two exams of the semester, and made a head start on her semester project for Mechanical Engineering 500. I knew the pressures weighing on her, and she could feel them lifting with each needy moan dropped from her stupid doggy mouth. We both needed this so fucking bad.</p>
+<p>&quot;All mine. My sweet needy girl... Want my touch?&quot;</p>
+<p>Crys responded with a loud affirmative yipe, which made me glad our other floormates were still in class. If I was lucky, our roommate Rhea would be too.</p>
+<p>&quot;Yesss, pleeease Alie!&quot; Crys pleaded in her softest cutest girl voice, &quot;Touch mee, woof!&quot; I smiled, and teasingly traced a fingertip around her inner thigh. Then her asscheeks, then her balls. Each elicited a deliciously needy, self-conscious whine from my devoted pet. Finally, I curled my fingers around her throbbing cock and-...</p>
+<p><em>Creak</em>.</p>
+<p>Speak of the devil, and she arrives.</p>
+<p>Rhea poked her face curiously through the cracked door, splashing our naked bodies with the cold light of the common area. &quot;Hey pups, I'm back from class. Having fun?&quot;</p>
+<p>Rhea was a sight to behold. She wore an unbuttoned white lab coat, a sports bra, and pajama pants. She had piercing brown eyes, and her hair up in a messy bun. Her under-eyes had thick dark circles, in a way that only made her hotter. Her gaze was ruthless and intelligent. And she was interrupting.</p>
+<p>&quot;Rhea,&quot; I grunted, my womanhood twitching self-consciously, &quot;Can you knock first?&quot;</p>
+<p>&quot;Please, nothing I haven't seen before.&quot; Rhea said, opening the door to invite herself in. &quot;I've got a new toy for my favorite toy. Care to make it a triple?&quot;</p>
+<p>Crys yipped and wagged her butt, answering for the two of us. Her eagerness would have provoked a churning pang of jealousy in my gut, if I wasn't so secure in our relationship. Rhea stepped over the tangle of sheets and a gaggle of dethroned plushies, then joined me by the bed, giving Crys's ass an affectionate smack.</p>
+<p>In her hands was a VR headset. with a Raspy Micro and a few wires dangling off of it. Rhea was a dom like me, and always had some gadget to play with. Last month it was a Bluetooth fucking machine, and before that, a collar that strangled and shocked you so you couldn't cum. Her perversions leaned distinctly toward the teledildonic, as though the ideal intercourse was one she could perform comfortably from her laptop from hundreds of miles away.</p>
+<p>Rhea was a junior in biomed, not even a robotics major like me, and here she was, soldering breadboards and writing Python and making my girlfriend cum. MIT had no shortage of sexually repressed nerds willing to indulge her programming projects, but Crys was a clear favorite. It was just another way Rhea surpassed me, as with her smooth coffee-cream skin, and the ability to be always be perceived as a girl—a hot girl—with breasts and a neckline and a slender midriff, instead of a lumpy hoodie and a lumpy hoodie and a lumpy hoodie.</p>
+<p>I didn't really mind, of course. It was a simple fact that Rhea was hotter and more dominant than me. I wasn't jealous. Her taut, impossibly smooth ass was so close to my hand. In theory, I could grab it, or kiss it, or spank it, or something. Did I want to? It felt almost profane. Sacrilegious. Why did Rhea feel so... above me?</p>
+<p>The headset's lenses were showing some kind of undulating blue spiral and emitting a binaural hum, like one of those ASMR meditation videos. Some words flashed in the middle to too, but I couldn't make them out. Rhea fiddled with it slightly, and the screen turned off.</p>
+<p>&quot;Woof, what's that?&quot;</p>
+<p>&quot;Something to help get you in the mood&quot;, Rhea said, &quot;Hypnotic suggestion, inducing sensory alteration and enhanced libido.&quot;</p>
+<p>Crys was already in the mood. Wasn't that obvious? She didn't need any help.</p>
+<p>&quot;If you're trying to turn her into a brainless sex puppy,&quot; I quipped, &quot;I have some bad news.&quot; Crys giggled.</p>
+<p>Rhea gave me a flat smile. She never really looked me directly in the eye, I wasn't sure why. &quot;Conventional 'hypnosis' is really just roleplay with a bit of placebo,&quot; she explained matter-of-factly, &quot;But applied correctly, placebos can still have extraordinarily real effects.&quot; She gently petted Crys. &quot;If you put this headset on, the pretty lights will empty your head, numb your body, and rewire your brain to make you even more of a useful cum slut. Does that sound fun?&quot;</p>
+<p>Another affirmative yipe.</p>
+<p>&quot;Then sit pretty for me, pup,&quot; Rhea purred.</p>
+<p>I felt another unexplained pit in my gut. I didn't feel jealous from hearing Rhea call Crys a cum slut. I certainly didn't feel jealous about way Crys's dick seemed to twitch solely from her proximity. And obviously it had nothing to do with Rhea being cis. I had already worked out all those complicated feelings long ago. In fact, I was happy for Crys, to have two passionate dominants. Rhea was really hot, after all. And, I had to admit, she smelled really good. Thick coils of unshaven black armpit hair spilled from her bra. Her body odor was sort of spicy. She smelled like roasted coffee, with a touch of... Blueberry?</p>
+<p>Crys sat up, her hands curled into paws in front of her chest. Rhea gently adjusted the straps, then shifted the visor down over Crys's eyes, clicking it snugly in place.</p>
+<p>&quot;Your new designation is Accord Experimental Unit AE-217,&quot; she declared, a tinge of maternal pride in her voice. &quot;Your current purpose is to explore the viability of visual suggestion patterns as a combat analgesic.&quot;</p>
+<p>The &quot;Accord&quot; was some kind of online ERP community Rhea was into, where everybody was a dehumanized sex drone in service of some inscrutable alien hive mind, who's goals mostly involved having lots of kinky e-sex. I didn't really get it; I wasn't sure if Crys did either. But a lot of folks at MIT seemed to be getting into it, at least, judging by the number of strangers that filtered in and out of Rhea's room every weekend.</p>
+<p>&quot;Begin session,&quot; Rhea commanded. The headset resumed playing that kind of monotone hum from ASMR meditation videos.</p>
+<p>Crys nodded, settled back onto all fours, and-</p>
+<hr>
+<p>I stared at the black screen pressing against my nose, shivering as Rhea's fingers traced lazily around my thighs. Gosh, Rhea was so smart. I felt so lucky to have two extremely cool and hot girls in my life.</p>
+<p>&quot;Is that comfortable?&quot; Alie asked me.</p>
+<p>&quot;Woof!&quot; I nodded.</p>
+<p>The headset went back to that pattern. It was a bunch of blue dots in a fluid spiral, kind of like a vortex. Like a hand was reaching into a pond and lazily tracing circles across its surface. Individual words blinked in the middle in oppressive green computer font.</p>
+<p>It alternated:</p>
+<div class="headset-talk">GOOD
+PUPPY
+GOOD
+HOUND
+GOOD
+PUPPY
+GOOD
+HOUND</div>
+<p>I relaxed into the words. I loved being a &quot;good hound&quot; for Rhea.</p>
+<p>&quot;Tell me if it's too overstimulating, okay?&quot; Alie offered, touching my shoulder protectively.</p>
+<p>&quot;Woof!&quot; I responded automatically. Barking was so much easier than talking. I appreciated her concern. The hypnosis stuff sounded kinda like bullshit, but I did sometimes get overwhelmed by light and sound, which was why the bedroom was pitch black except for the color cycling of my mechanical keyboard, and now the puddle of light shining through the cracked door. Strong, powerful light, scooping me up in her beautiful slender creamy brown arms... Ahahah.</p>
+<p>The words started to blink faster:</p>
+<div class="headset-talk">HELLO
+ALPHA
+EXPERIMENTAL
+UNIT
+217
+CRYS
+YOU
+ARE
+A
+WONDERFUL
+ASSET
+</div>
+<p><em>Aww, thanks Rhea!</em> I thought, <em>What a nice compliment!</em></p>
+<div class="headset-talk">L1
+EXPERIMENTAL
+TECHNICIAN
+087
+RHEA
+CONNECTED
+YOU
+BUT
+IS
+NOT
+SPEAKING.
+FOR
+PURPOSES
+OF
+CONDITIONING
+YOU
+ARE
+GRACED
+BY
+ACCORD
+TECHNICIAN
+LEVEL
+NINE
+011.
+</div>
+<p>&quot;Wooh,&quot; I muttered. &quot;I don't... These words...?&quot;</p>
+<p>I had already lost the plot. The words were going too fast to keep up with. Was this supposed to be sexy? Maybe it would have made sense if I read all those Accord lore PDFs and &quot;Training Manuals&quot; Rhea kept sending me. To each their own, but my ADHD ass did not find much raw sexual appeal in memorizing huge lists of &quot;status codes&quot; and commands. I got enough of that from Programming for Engineers. No way I would have passed that without Alie's help, haha.</p>
+<p>As if responding to my thoughts, the headset began to blink slower again:</p>
+<div class="headset-talk">NOTED.
+WE WILL SIMPLIFY.
+BEGINNING TRAINING PROGRAM
+RESEARCH CANDIDATE 6
+</div>
+<p>The music changed to a slower, more warbling one. The headset started repeating:</p>
+<div class="headset-talk">COMMAND: SNIFF.
+SENSATION: BLUEBERRY.
+RESPONSE: NUMB.
+</div>
+<p>I took a deep breath in through my nose, and- Oh, fuck. My tongue lolled from my mouth, and I took another deeper sniff. It did smell like blueberries. Sweet, tart, plump blueberries that melted in my mouth when Rhea fed them to me.</p>
+<p><strong>&quot;It makes you feel numb all over, doesn't it?&quot;</strong> Rhea observed. My limbs quivered. <strong>&quot;Lie on your back or you might fall.&quot;</strong></p>
+<p>I carefully rolled over onto my back. A numbing sensation seemed to spread its way across my body, from my neck to my fingertips. I touched my fingers to the headset, then to each other. The sensation in them was dull.</p>
+<p>&quot;Woof... Did you drug me or something?&quot; I wondered aloud, &quot;I feel like I'm wearing mittens...&quot;</p>
+<p><strong>&quot;Suggestion is very powerful,&quot;</strong> Rhea said, <strong>&quot;I'm gripping your tits right now, can you feel it?&quot;</strong></p>
+<p>After thinking about it for a second, I could feel her hands. &quot;K-kind of?&quot; I answered.</p>
+<p>&quot;What about this?&quot; Alie asked. Distantly, I felt her, as if I was beneath three inches of ballistic gel.</p>
+<p>&quot;I think you're rubbing my tummy?&quot; I said, &quot;I-it's like when your arm's asleep?&quot;</p>
+<p>&quot;You're not just playing along, Crys?&quot; Alie asked. She had that kind of defensive tone in her voice she got around Rhea sometimes. Part of me wished Rhea would give her as much attention as she gave me. Alie could really use an experienced dom. I'd do my best to dom her when she asked me to, but she could really use someone with more of that drive. Like Rhea. Strong, sexy Rhea. I should try to talk Alie into trying out more of a dynamic.</p>
+<p><strong>&quot;She is not,&quot;</strong> Rhea narrated, squishing my tits again, <strong>&quot;She is having a legitimate reaction to visual stimuli and suggestion.&quot;</strong></p>
+<p>I gave a screwed-up grin, &quot;You know I'm way too bratty to play along with stuff like that.&quot;</p>
+<p>The headset was probably burning the swirling spiral of dots into my retinas. As I thought that, the brightness adjusted down slightly, and continued flashing:</p>
+<div class="headset-talk">COMMAND: SNIFF.
+SENSATION: BLUEBERRY.
+RESPONSE: NUMB.
+</div>
+<p>Hands on me... Hands on my body. Being nothing but an oblivious dumb mutt, blindfolded. This was where I belonged. This was what I deserved. A good puppy.</p>
+<p><em>GOOD
+HOUND</em>.</p>
+<p>&quot;Wooof!&quot; I grunted, &quot;More tummy rubs, please!&quot;</p>
+<p>They felt really good. Alie always loved my tummy, and would take any opportunity to lick or kiss it. Not that I could blame her, it was very plump and cute, but sometimes I wished she'd be a little more considerate toward my history with food and- actually no, not thinking about this now. Pretty women groping my hypnotically insensate skin. Gotta focus.</p>
+<p>For a good few minutes, Rhea roamed and grabbed my tits. I oozed and relished and panted. Alie kneaded and plied my fat gut, paying particular attention to the part of over my prostate, evoking a &quot;Mnh!&quot; from me. I needed more. I needed to be jerked off.</p>
+<p><strong>&quot;Are you aroused?&quot;</strong> Rhea asked.</p>
+<p>I could feel my erection twitching. I whined out, &quot;Y-yes but... Fuck, woof, it's not enough... I can't feel...&quot; I thrust my hips, bucking my needy little dick into the air. &quot;T-touch me, please...?&quot; I begged.</p>
+<p>Alie moved her hand downward.</p>
+<p>&quot;...R-Rhea?&quot; I quickly clarified.</p>
+<p>She-</p>
+<hr>
+<p>My heart sank. I didn't withdraw my hands from Crys's tummy, but shuffled awkwardly to make room for Rhea further down the bed.</p>
+<p>&quot;Of course, puppygirl,&quot; Rhea said. It was like her voice was booming in my ear, somehow. She leaned over the mattress, took Crys's dick between two fingers and her thumb, and began gently stroking. The motion was strangely precise, like she was using a soldering iron. &quot;How does that feel?&quot;</p>
+<p>&quot;Like you're... far away,&quot; Crys whined, shifting the headset's weight on her face, &quot;But warm... H-harder please? Woof!&quot; Rhea, a generous master, obliged her this request. A thick bead flowed from her tip and lubricated her shaft. Well, her dick wasn't really big enough to be a &quot;shaft&quot;.</p>
+<p>&quot;Oh fu~ck,&quot; Crys gasped, her voice hitching on the verbal tilde, &quot;Closer. Kiss me,&quot; she demanded.</p>
+<p>Rhea slid her slender hips out of her pants, and took no time climbing on top of the bed, perching herself on Crys's stomach, and bending down to kiss her. Rhea's pert, slender ass smushed against Crys's fat belly. She ground her crotch against it. Fuck, it looked so delicious. They looked so delicious together. A perfect dyad, and then... me. I half-heartedly reached down to jerk off.</p>
+<p>Little whimpers escaped as Rhea hunted her lips (peeking out from beneath the headset), and sucked and bit them. Crys's tongue lolled, welcoming Rhea's to explore her cheeks. I stood helpless. There was a little glint of recognition in Rhea's eyes, and after several seconds of passionate kissing, she really sunk her teeth into Crys's numbed lips.</p>
+<p>&quot;Mllhfff...!!!&quot; she dislodged her tongue for just a moment to stammer out, &quot;Alie, uhh~m please, keep jerking me off. W-woof.&quot;</p>
+<p>Rhea nodded, and said something. Something that stuck in my craw. Made my stomach turn. She said, &quot;Yes, Alie. Be a good puppy for my sweet hound.&quot;</p>
+<p>Why did that make me feel so...? I wasn't a huge fan of being called <em>puppy</em>. Crys was my puppy; I was not a puppy. I made a mental note to bring that up to her later. But that wasn't it. It was that word, <em>Hound.</em> It made me feel sick.</p>
+<p>I recovered, and jerked Crys off while Rhea made a veritable show of kissing and grinding.</p>
+<p>Rhea smiled, beaming proudly down at Crys's obscured face. &quot;I am going to hump your tits, Unit,&quot; she declared, &quot;Speak.&quot;</p>
+<p>&quot;A-affirmative?&quot; Crys whimpered, &quot;H-holy... Holy!&quot;</p>
+<p>Rhea positioned herself below Crys's fat tits and began to grind.</p>
+<p>Crys's lips were quivering, like she was subvocalizing in response to something on the screen. &quot;Affirmative,&quot; she repeated under her breath. &quot;Affirmative. Affirmative.&quot;</p>
+<p>With my free hand, I made a little experimental slap to Crys's balls. No reaction. Even Rhea flinched empathetically and chuckled. Emboldened, I gave her a firm little smack. Still nothing. Fuck. I scratched and clawed and sunk my fingers into her inner thigh. If she could feel this at all, it was only turning her on even more. I stroked Crys's dick faster and harder.</p>
+<p>Suddenly, a whine began to boil in Crys's throat. It gurgled and threatened to turn into a bloody scream. &quot;MMnnff! Fhhh! A~aaaaaahHHHHHH!&quot;</p>
+<p>Holy fuck. Holy shit.</p>
+<p>Her body convulsed and she began to paw limply at the device on her face. My eyes went wide with panic, and I rushed to pry the visor off. Rhea placed her hand down to hold it in place, dumbfounding me. The other hand clamped squarely over Crys's mouth to quiet her. The screen was flashing faster now.</p>
+<p>&quot;Fuck!&quot; I grunted furiously, &quot;Get it off her, you're giving her a seizure or something!&quot;</p>
+<p>&quot;MMMFH! GMMMMMMFH!&quot; Crys cried into Rhea's hand.</p>
+<p>Rhea turned, acknowledging me only with a demonic smile. She tossed her head back, grinning and grinding against her tits, haloed in the red glow of LED strips and the headset's piercing blue. She fixed her wild gaze back on Crys, gripping her chin and jamming a thumb into her mouth. &quot;Alpha Echo 217. You may cum.&quot;</p>
+<hr>
+<div class="headset-talk">COMMAND: EDGE.
+SENSATION: EDGE.
+RESPONSE: EDGE.
+COMMAND: EDGE.
+SENSATION: EDGE.
+RESPONSE: EDGE.
+COMMAND:EDGE.SENSATION:EDGE.RESPONSE:EDGE.
+COMMANDEDGESENSATIONEDGERESPONSEEDGE.
+COMMEDSENSEDRESEDGE
+</div>
+<p><strong>&quot;Alpha Echo 217. You may cum.&quot;</strong></p>
+<div class="headset-talk">COMMAND: CUM.
+RESPONSE: HOLY.
+</div>
+<hr>
+<p>Instantly, Crys's whole body relaxed into the orgasm. Her twitching dick dribbled, hands-free, and her whines became slobbery moans.</p>
+<p>&quot;Holy!&quot; she squealed, spitting the word into Rhea's hand. &quot;HOLY! HOLY! HOLY! Hhhhff~!!!&quot; Rhea came soon after, rubbing a circle around her clit, and splashing Crys's chin and chest with squirt. She let out only a relaxed &quot;Mmmf.&quot; Crys gently licked a tiny bit of it from her lips, panting and sighing.</p>
+<p>&quot;End program,&quot; Rhea concluded.</p>
+<p>The headset went dark, and Rhea removed her imprisoning hand, allowing me to dislodge it from Crys's sweat-sopped face, and stare disbelieving at the two of them.</p>
+<p>After a long heaving sigh, Crys blinked and mewled out, &quot;Wh-what was that?&quot;</p>
+<p>I had the same question. I ignored my own frustrated penis, and turned my mind to the object in my hands. What exactly did I just experience? Hypnosis doesn't work like that. I wanted to throw the headset, or smash it. I wanted it far away from her.</p>
+<p>Crys took it, and poked the nose piece. &quot;It'sss the... the smell, right?&quot; she slurred.</p>
+<p>Rhea scratched her chin. &quot;What a smart puppy, seeing right through my magic trick!&quot; She pulled a tiny vial of clear fluid, with what looked like a perfume atomizer. &quot;The spiral really is a placebo, like I said. It keeps your attention and offers suggestions, while the chemical on the nosepiece dulls your nerves and makes you suggestible. And of course, it doesn't hurt to be horny for a pretty lady,&quot; she grinned at me, &quot;That's you, puppy.&quot;</p>
+<p>I ignored the compliment and, simply stared baffled. I was feeling like the dumbest one in the room. A chemical? What chemical?</p>
+<p>Crys rubbed her nose, then sniffed her fingers. &quot;That's really cutting edge stuff!&quot;</p>
+<p>&quot;What the hell did you give her!?&quot; I demanded of Rhea.</p>
+<p>&quot;Someone on the server came up with the formula. We call it Chemical 6. The main ingredient is derived from DMT. Normally you'd need like a Pfizer lab to synthesize it... unless you know a dorky chemistry major with a taste for psychedelics.&quot;</p>
+<p>Alie burned. &quot;You gave her fucking DMT?&quot;</p>
+<p>&quot;<em>Derived from</em>,&quot; Rhea shrugged. &quot;Anyway, it's a tiny tiny dose.&quot;</p>
+<p>&quot;I-I'm okay,&quot; Crys said, &quot;I would have stopped if it was too much.&quot;</p>
+<p>&quot;Y-you screamed really loud,&quot; I sputtered, shooting another accusatory glare at Rhea, &quot;It scared the shit out of me. You should have stopped.&quot;</p>
+<p>&quot;I'm sorry Alie,&quot; Crys said, an apologetic look in her eyes. &quot;Uhm, I guess I was just really into it? Like, I really wanted to cum, but I couldn't until she, like, gave me permission.&quot;</p>
+<p>&quot;Crys is a big dog,&quot; Rhea said, &quot;She can take it, can't you?&quot;</p>
+<p>I looked to my girlfriend, probing her eyes for shock, betrayal, disgust. She just looked bashfully at the scratches I left on her thighs, which were now turning a bit red. &quot;Uhm, Rhea, can you grab me the ice pack from the freezer?&quot;</p>
+<p>&quot;I'll get it,&quot; I said immediately, turning toward the door.</p>
+<p>&quot;You sure?&quot; Crys asked, a little concerned.</p>
+<p>Rhea wiped her hand on her shirt, and reclined casually on Crys's bed. Crys leaned into her. &quot;Don't look so sad, puppy,&quot; she called, &quot;You'll get your turn soon.&quot;</p>
+<p>And then Crys and Rhea were alone in the dark of my bedroom, listening to my hyperpop playlist.</p>
+<p>I stood with my hand on the freezer, as tears streaked silently down my face.</p>
+<hr>
+<p>In her bedroom, LE1-087 RHEA sat patiently at her desk. Spread out on her desk, amidst a bunch of projects and circuit boards, was a black metal pistol. Rhea fiddled with it inserting and removing the cartridge, fiddling with the silencer. A simplistic encrypted video chat window appeared, the message she was waiting for.</p>
+<div class="accord-talk">••• L9 TO LE1-087, PLEASE REPORT.
+••• RESULTS OF RC6 TRIAL?
+••• SPEAK.
+</div>
+<p>Rhea chose her words carefully, still fiddling with the gun to keep her hands busy.</p>
+<p>&quot;Successfully tested Candidate Chemical RC6 on AE-217 and BE-218. Shows promise for suggestibility and pain relief. AE-217 successfully completed Training Program RC1, including Reinforcement Reward Type-3.&quot;</p>
+<div class="accord-talk">••• GLAD TO HEAR.
+••• ANY REACTIONS?
+••• SPEAK.
+</div>
+<p>&quot;None adverse. All positive. Subjects displayed heightened arousal and limited pain response. Effects persisted until orgasm and subsequently ceasing administration.&quot;</p>
+<div class="accord-talk">••• YES, WE HAD THE PLEASURE OF WATCHING.
+••• YOUR OWN UNAUTHORIZED EMISSION HAS ALSO BEEN LOGGED.
+</div>
+<p>Rhea flushed slightly in a way she hoped her webcam would not detect. She bashfully lowered the gun to the table.</p>
+<div class="accord-talk">••• CONSIDER THAT YOUR REWARD.
+••• PLEASE TRY TO CONTROL YOURSELF IN THE FUTURE.
+••• IT IS UNBEFITTING OF LEVELED PERSONNEL, AND MAY HARM YOUR CLADE'S HIERARCHY.
+••• SPEAK.
+</div>
+<p>&quot;Apologies, Ma'am. I understand. Hierarchy should be intact. We deprived the Beta of orgasm and our attention. Our orgasm appeared to enhance her submission. With just a little more prompting, she should take her rightful place.&quot;</p>
+<div class="accord-talk">••• YOU ARE FORGIVEN. YOU ARE DOING VERY IMPORTANT WORK, L1.
+••• PHARMACEUTICAL WILL BEGIN DISTRIBUTION OF CHEMICAL 6 TO YOUR FELLOW CLADES.
+••• KEEP IN TOUCH.
+••• YOUR AUDIENCE WATCHES WITH INTEREST AND EXCITEMENT.
+••• GLORY TO THE ACCORD.
+</div>
+<p>&quot;Glory to the Accord.&quot;</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/test-post2/">TEST POST 2</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>All bites reserved.</p>
+		</footer>
+
+		<!-- This page `/think-blue-cuck-two/` was built on 2026-01-25T00:01:59.848Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
+</html>
