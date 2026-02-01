@@ -7,6 +7,7 @@ permalink: think-blue-cuck-two/
 theme: accord
 image: ./cover.webp
 imagealt: "Think Blue Cuck Two"
+ogimage: content/blog/20260124-think-blue-cuck-two/cover.webp
 ---
 
 <style>
