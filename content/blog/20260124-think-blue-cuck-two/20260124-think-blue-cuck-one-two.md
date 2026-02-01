@@ -1,6 +1,6 @@
 ---
 title: Think Blue, Cuck Two
-description: A short story by Helliara Hyenas. Rhea tests the new training protocol. Crys is welcomed to the fold. Alie watches and learns about her girlfriend's hobbies.
+description: Microfiction. Your name is «Food». On the way home, a kind stranger helps you remember that this is a perfectly normal name for a person to have.
 date: 2026-01-24
 tags: accord
 permalink: think-blue-cuck-two/
