@@ -1,6 +1,6 @@
 ---
 title: Food Foryou
-description: A short story by Helliara Hyenas. 
+description: Your name is «Food». On the way home, a kind stranger helps you remember that this is a perfectly normal name for a person to have.
 date: 2026-01-24
 tags: helliara, hollis, skeet
 permalink: food-foryou/
