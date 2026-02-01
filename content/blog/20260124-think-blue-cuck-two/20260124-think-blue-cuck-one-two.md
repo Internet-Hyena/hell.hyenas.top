@@ -5,13 +5,13 @@ date: 2026-01-24
 tags: accord
 permalink: think-blue-cuck-two/
 theme: accord
+image: ./cover.webp
+imagealt: "Think Blue Cuck Two"
 ---
 
 <style>
     {% include "css/cuck.css" %}
 </style>
-
-![Think Blue Cuck Two.](./20260124-think-blue-cuck-one-two.webp)
 
 CW: Pet play. Hypnosis. Non-consensual drug use. Insecurity. Voyeurism. Questionably ethical non-monogamy. Living weapons (Drone kink). Non-living weapons (Firearms).
 

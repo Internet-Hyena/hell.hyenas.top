@@ -3,19 +3,21 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import Image from "@11ty/eleventy-img";
+import path from "node:path";
 
 
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function(eleventyConfig) {
+export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if (data.draft) {
 			data.title = `${data.title} (draft)`;
 		}
 
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
 	});
@@ -107,6 +109,28 @@ export default async function(eleventyConfig) {
 			animated: true,
 		},
 	});
+
+	// Opengraph shortcode
+	// https://blog.embee.co/posts/11ty-open-graph-funtimes/
+	eleventyConfig.addShortcode(
+		"makeOGImg",
+		async function (src, siteUrl) {
+			if (src == undefined) {
+				return;
+			}
+			siteUrl = siteUrl ?? "/";
+			// Process the image using the Eleventy Image Plugin
+			const metadata = await Image(src, {
+				widths: [1200], // Standard Open Graph image size
+				formats: ["jpeg"], // Use JPEG for Open Graph compatibility
+				outputDir: "./_site/img/og/", // Output directory for OG images
+				urlPath: path.join(siteUrl, "img/og/"), // URL path for OG images
+			});
+
+			// Get the URL of the generated image
+			return metadata.jpeg[0].url;
+		}
+	);
 
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);

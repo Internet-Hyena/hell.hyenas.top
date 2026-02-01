@@ -4,9 +4,9 @@ description: A short story by Helliara Hyenas.
 date: 2026-01-24
 tags: helliara, hollis, skeet
 permalink: food-foryou/
+image: ./cover.png
+ogimage: content/blog/20260131-food-foryou/cover.png
 ---
-
-![Food Foryou](./20260131-food-foryou.png)
 
 > *This is an unrolled version of this post: <https://bsky.app/profile/hell.hyenas.top/post/3mdrffwr2es2g>*
 
