@@ -6,6 +6,8 @@ tags: helliara, hollis, skeet
 permalink: food-foryou/
 ---
 
+![Food Foryou](./20260131-food-foryou.png)
+
 > *This is an unrolled version of this post: <https://bsky.app/profile/hell.hyenas.top/post/3mdrffwr2es2g>*
 
 // fatal vore, memory alteration
