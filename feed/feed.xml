@@ -15,7 +15,8 @@
     <link href="https://example.com/food-foryou/" />
     <updated>2026-01-24T00:00:00Z</updated>
     <id>https://example.com/food-foryou/</id>
-    <content type="html">&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/food-foryou/jvpr69v049-512.avif 512w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/food-foryou/jvpr69v049-512.webp 512w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/food-foryou/jvpr69v049-512.png&quot; alt=&quot;Food Foryou&quot; width=&quot;512&quot; height=&quot;512&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;This is an unrolled version of this post: &lt;a href=&quot;https://bsky.app/profile/hell.hyenas.top/post/3mdrffwr2es2g&quot;&gt;https://bsky.app/profile/hell.hyenas.top/post/3mdrffwr2es2g&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;// fatal vore, memory alteration&lt;/p&gt;
