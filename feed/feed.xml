@@ -326,20 +326,4 @@ RESPONSE: HOLY.
 &lt;p&gt;&amp;quot;Glory to the Accord.&amp;quot;&lt;/p&gt;
 </content>
   </entry>
-  <entry>
-    <title>TEST POST 2</title>
-    <link href="https://example.com/test-post2/" />
-    <updated>2026-01-15T00:00:00Z</updated>
-    <id>https://example.com/test-post2/</id>
-    <content type="html">&lt;p&gt;This is a test post for the new website.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>NEW ANSIBLE, WHO THIS</title>
-    <link href="https://example.com/test-post/" />
-    <updated>2025-12-19T00:00:00Z</updated>
-    <id>https://example.com/test-post/</id>
-    <content type="html">&lt;p&gt;This is a test post for the new website.&lt;/p&gt;
-</content>
-  </entry>
 </feed>
