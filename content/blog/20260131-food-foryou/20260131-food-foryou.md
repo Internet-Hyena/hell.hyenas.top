@@ -2,7 +2,7 @@
 title: Food Foryou
 description: Your name is «Food». On the way home, a kind stranger helps you remember that this is a perfectly normal name for a person to have.
 date: 2026-01-24
-tags: helliara, hollis, skeet
+tags: helliara,hollis,skeet
 permalink: food-foryou/
 image: ./cover.png
 ogimage: content/blog/20260131-food-foryou/cover.png
